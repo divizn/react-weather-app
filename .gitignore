@@ -13,6 +13,8 @@
 
 #environment variables
 .env
+.env.development
+
 
 # misc
 .DS_Store
