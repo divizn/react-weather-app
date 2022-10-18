@@ -14,10 +14,6 @@ const Weather = () => {
         setData(response.data);
         console.log(response.data);
       });
-
-      if (units === "standard") {
-        const unit = "K";
-      }
       setLocation("");
     }
   };
