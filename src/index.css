@@ -97,3 +97,69 @@ h1{
   position: relative;
   margin-right: 0;
 }
+
+@media only screen and (max-width: 807px) {
+    .temp {
+      font-size: 6rem;
+    }
+    .top-content{
+      margin-top: 20px;
+    }
+    .top-content h1 {
+      margin-left: 0px;
+    }
+    .bottom-content {
+      right: auto;
+      left: 0;
+      display: flex;
+      width: 100vw;
+      flex-wrap: nowrap;
+      position: relative;
+      justify-content: flex-start;
+      margin-top: 130px;
+    }
+
+    body{
+      width: auto;
+      height: 100%;
+
+    }
+
+    .searchBar {
+      flex-direction: column;
+      right: auto;
+      left: auto;
+      width: 15%;
+      margin: 0;
+    }
+    .searchBar select {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+  .searchBar {
+    flex-direction: column;
+    right: auto;
+    left: auto;
+    width: 20%;
+    margin: 0;
+  }
+  .searchBar input {
+    width: 320px;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .temp {
+    font-size: 6rem;
+  }
+  
+  .cityName {
+    font-size: 2rem;
+    color: lime;
+    
+  }
+}
