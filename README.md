@@ -6,8 +6,8 @@
 
 <h2>TODO:</h2>
 
-[x] Make it work on mobile resolutions ✔️
-[ ] Clean up the code
+- [x] Make it work on mobile resolutions ✔️
+- [ ] Clean up the code
 
 <h2> Usage instructions</h2>
 
