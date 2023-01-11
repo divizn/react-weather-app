@@ -10,10 +10,15 @@ const Weather = () => {
 
   const searchWeather = (event) => {
     if (event.key === "Enter") {
-      axios.get(url).then((response) => {
-        setData(response.data);
-        console.log(response.data);
-      });
+      axios
+        .get(url)
+        .then((response) => {
+          setData(response.data);
+        })
+        .catch((error) => {
+          if (error.response) alert(error.response.data.message);
+          else alert("An unknown error occured, please try again later.");
+        });
       setLocation("");
     }
   };
