@@ -12,8 +12,10 @@ const Weather = () => {
   return (
     <>
       <SearchBar getData={getData} />
-      <CityInfo data={data} />
-      <WeatherInfo data={data} />
+      <div className="container">
+        <CityInfo data={data} />
+        <WeatherInfo data={data} />
+      </div>
     </>
   );
 };

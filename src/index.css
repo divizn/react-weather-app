@@ -1,54 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 * {
   margin: 0;
   font-family: Montserrat;
   color: #fff;
   background-color: #101010;
+  overflow: hidden;
 }
 
 .searchBar {
-  position: relative;
-  left: 0;
-  right: 0;
-  width: 100%;
-  margin: auto;
-  justify-content: center;
   display: flex;
-}
-h1{
-  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
 }
 
 .searchBar input {
-  background-color: rgba(255,255,255,0.1);
-  border-color: rgba(255, 255, 255, .4);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
   border-radius: 20px;
-  margin-top: 30px;
-  width : 500px;
-  height: 50px;
+  padding: 0.5rem;
+  outline: none;
   color: white;
   font-size: 3rem;
   text-align: center;
 }
 
 ::placeholder {
-  color: rgba(255,255,255,0.4);
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .searchBar select {
-  height: 55px;
   margin-left: 10px;
+  padding: 0.5rem;
   font-size: 1rem;
-  margin-top: 30px;
-  background-color: rgba(255,255,255,0.1);
-  border-color: rgba(255, 255, 255, .3);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
   border-width: 1px;
   border-radius: 10px;
 }
 
-.top-content {
+.container {
   margin-top: 75px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+.top-content {
   position: relative;
   display: flex;
   width: 100%;
@@ -56,12 +54,11 @@ h1{
   color: white;
   justify-content: space-between;
   flex-direction: column;
+  margin-left: 100px;
 }
 .top-content h1 {
   padding: 0;
   margin: 0;
-  margin-left: 100px;
-
 }
 
 .temp {
@@ -71,95 +68,80 @@ h1{
 .cityName {
   font-size: 4rem;
   color: lime;
-  
 }
 
 .description {
   font-size: 1rem;
 }
 
-.bottom-content{
+.bottom-content {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
   position: absolute;
   bottom: 0;
   right: 0;
-  flex-direction: row;
-  justify-content: flex-end;
-  width: 50%;
-  flex-wrap: wrap;
+  margin: 0 20px 20px 0;
 }
 
-.maxtemp, .mintemp, .windspeed, .humidity, .feelslike {
+.maxtemp,
+.mintemp,
+.windspeed,
+.humidity,
+.feelslike {
   color: lime;
 }
 
-.details, .temps {
+.details,
+.temps {
   position: relative;
   margin-right: 0;
 }
 
-@media only screen and (max-width: 807px) {
-    .temp {
-      font-size: 6rem;
-    }
-    .top-content{
-      margin-top: 20px;
-    }
-    .top-content h1 {
-      margin-left: 0px;
-    }
-    .bottom-content {
-      right: auto;
-      left: 0;
-      display: flex;
-      width: 100vw;
-      flex-wrap: nowrap;
-      position: relative;
-      justify-content: flex-start;
-      margin-top: 130px;
-    }
+@media screen and (max-width: 768px) {
+  .top-content {
+    margin-left: 0;
+  }
+  .bottom-content {
+    margin: 0;
+    font-size: 0.8rem;
+  }
+  .temp {
+    font-size: 8rem;
+  }
+  .cityName {
+    font-size: 2rem;
+  }
+  .description {
+    font-size: 0.8rem;
+  }
 
-    body{
-      width: auto;
-      height: 100%;
-
-    }
-
-    .searchBar {
-      flex-direction: column;
-      right: auto;
-      left: auto;
-      width: 15%;
-      margin: 0;
-    }
-    .searchBar select {
-      width: 100%;
-      margin-left: 0;
-      margin-top: 10px;
-    }
+  .details {
+    margin-right: 20px;
+  }
 }
 
-@media only screen and (max-width: 400px) {
-
+@media screen and (max-width: 480px) {
   .searchBar {
     flex-direction: column;
-    right: auto;
-    left: auto;
-    width: 20%;
-    margin: 0;
+    margin-right: 10px;
+    margin-left: 10px;
   }
   .searchBar input {
-    width: 320px;
-    margin-left: 0;
-    margin-top: 10px;
+    padding: 0;
+    margin-bottom: 10px;
   }
   .temp {
     font-size: 6rem;
   }
-  
   .cityName {
-    font-size: 2rem;
-    color: lime;
-    
+    font-size: 1.5rem;
+  }
+  .description {
+    font-size: 0.6rem;
+  }
+  .bottom-content {
+    font-size: 0.6rem;
   }
 }
